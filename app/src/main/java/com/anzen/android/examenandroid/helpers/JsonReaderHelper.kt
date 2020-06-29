@@ -2,7 +2,6 @@ package com.anzen.android.examenandroid.helpers
 
 import android.content.Context
 import android.location.Location
-import android.util.Log
 import com.anzen.android.examenandroid.R
 import com.anzen.android.examenandroid.models.Bike
 import com.anzen.android.examenandroid.utils.*
@@ -11,7 +10,9 @@ import com.google.gson.Gson
 
 class JsonReaderHelper(private val context: Context) {
 
-
+    /**
+     * Get data from raw data and parse to Bike Objects
+     */
     fun getInfoBikes(responseListener: ResponseListener<ArrayList<Bike>>, filter:Int,location:Location ) {
         try {
             val jsonBikes = context.resources.openRawResource(R.raw.bikes)
@@ -21,19 +22,17 @@ class JsonReaderHelper(private val context: Context) {
             val bikesAvailable =removeBikesUnavailable(bikes)
             when (filter) {
                 0 -> {
-                    responseListener.onSuccess(/* TODO RESPUESTA EN MODELO PARSEADO */ getBikesNear(bikesAvailable,location))
+                    responseListener.onSuccess(getBikesNear(bikesAvailable,location))
                 }
                 1 -> {
-                    responseListener.onSuccess(/* TODO RESPUESTA EN MODELO PARSEADO */
-                        getAvailableBikes(bikesAvailable))
+                    responseListener.onSuccess(getAvailableBikes(bikesAvailable))
                 }
-                else -> {
-                    responseListener.onSuccess(/* TODO RESPUESTA EN MODELO PARSEADO */  getAvailablePlaces(bikesAvailable))
+                2 -> {
+                    responseListener.onSuccess(getAvailablePlaces(bikesAvailable))
                 }
             }
         }catch (e: Exception){
-            Log.e("Error",e.toString())
-            responseListener.onError(/* TODO RESPUESTA EN CASO DE ERROR AL PARSEAR */ e.toString())
+            responseListener.onError( e.toString())
         }
 
     }

@@ -11,7 +11,7 @@ data class Bike (
     @SerializedName("bikes") val bikes : Int,
     @SerializedName("slots") val slots : Int,
     @SerializedName("zip") val zip : Int,
-    @SerializedName("address") val address : String,
+    @SerializedName("address") var address : String,
     @SerializedName("addressNumber") val addressNumber : String,
     @SerializedName("nearbyStations") val nearbyStations : String,
     @SerializedName("status") val status : String,

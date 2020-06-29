@@ -12,5 +12,14 @@
         <item name="windowNoTitle">true</item>
     </style>
     <style name="SplashTheme" parent="Theme.AppCompat.Light.NoActionBar"></style>
+    <style name="MatchSpinnerStyle" parent="android:style/Widget.ListView.DropDown">
+        <item name="android:divider">@color/colorDivider</item>
+        <item name="android:dividerHeight">2dp</item>
+    </style>
+
+    <style name="MatchSpinnerTheme" parent="AppTheme">
+        <item name="android:dropDownListViewStyle">@style/MatchSpinnerStyle</item>
+        <item name="android:textSize">16sp</item>
+    </style>
 
 </resources>

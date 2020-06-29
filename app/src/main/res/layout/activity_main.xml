@@ -5,29 +5,37 @@ xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
 android:orientation="vertical"
-android:padding="6dp"
+android:padding="3dp"
+    android:background="@color/transparent"
 tools:context=".view.MainActivity">
 <TextView
     style="@style/TextAppearance.AppCompat.Large"
+    android:textStyle="bold"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:gravity="center_horizontal"
     android:layout_marginTop="8dp"
     android:layout_marginBottom="8dp"
+    android:textColor="@color/green"
+
     android:text="@string/title_bikes">
 </TextView>
     <LinearLayout
+        android:divider="@color/colorDivider"
         android:orientation="vertical"
-        android:padding="8dp"
+        android:padding="2dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <Spinner
             android:id="@+id/sp_filter"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_margin="16dp"
-            android:hint="@string/filter_hint" />
+            android:layout_margin="20dp"
+            android:hint="@string/filter_hint"
+            android:minHeight="30dp"
+            android:theme="@style/MatchSpinnerTheme" />
         <androidx.recyclerview.widget.RecyclerView
             android:padding="8dp"
             android:id="@+id/rv_bikes_list"

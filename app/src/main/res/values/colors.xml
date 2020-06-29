@@ -10,4 +10,7 @@
     <color name="colorDivider">#BDBDBD</color>
     <color name="transparent">#ADFFFFFF</color>
     <color name="white">#FFFFFF</color>
+    <color name="green">#00973C</color>
+    <color name="violet">#813E92</color>
+    <color name="blue">#038AC6</color>
 </resources>

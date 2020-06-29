@@ -35,6 +35,7 @@ fun getAvailableBikes(bikes: ArrayList<Bike>): ArrayList<Bike> {
 fun getBikesNear(bikes: ArrayList<Bike>,locationUser:Location): ArrayList<Bike> {
     for (bike in bikes) {
         bike.distance =getDistanceBetweenLocations(locationUser,bike.lat,bike.lon)
+        bike.address = bike.address.toLowerCase()
     }
     return bikes.sortedWith (compareBy(Bike::distance)).toList() as ArrayList<Bike>
 }

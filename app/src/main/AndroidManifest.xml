@@ -22,7 +22,6 @@
             android:name=".view.MainActivity"
             android:launchMode="singleInstance"
             android:theme="@style/AppTheme.NoActionBar">
-
         </activity>
     </application>
 

@@ -4,10 +4,11 @@
     <string name="lb_places_available">Lugares disponibles:</string>
     <string name="title_bikes">ECOBICIS</string>
     <string name="filter_hint">Filtro</string>
-    <string name="item_bikes_available">Bicicletas Disponibles:  %1$d</string>
-    <string name="item_places_available">Lugares Disponibles:  %1$d</string>
+    <string name="item_bikes_available">Bicicletas:  %1$d</string>
+    <string name="item_places_available">Lugares:  %1$d</string>
     <string name="title_location_permission">Permisos de Localización.</string>
     <string name="message_location_permission">Necesita el permiso de ubicación para que algunas cosas funcionen.</string>
+    <string name="error_general">Sucedió un error, contacte al administrador.</string>
     <string-array name="filter_bikes_array">
         <item>Bicis Cercanas</item>
         <item>Bicis Disponibles</item>

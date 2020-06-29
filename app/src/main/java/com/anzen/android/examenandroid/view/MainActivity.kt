@@ -45,7 +45,6 @@ class MainActivity : AppCompatActivity() {
             override fun onNothingSelected(parent: AdapterView<*>?) {
                 TODO("Not yet implemented")
             }
-
             override fun onItemSelected(
                 parent: AdapterView<*>?,
                 view: View?,
@@ -62,7 +61,7 @@ class MainActivity : AppCompatActivity() {
                     }
                     override fun onError(error: String){
                         Log.e("On Error",error)
-                        Toast.makeText(applicationContext,"Sucedió un error, contacte al administrador.",Toast.LENGTH_LONG).show()
+                        Toast.makeText(applicationContext,getString(R.string.error_general),Toast.LENGTH_LONG).show()
                     }
 
                 },position,locationUser)
@@ -70,6 +69,9 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    /**
+     * Check permission of access location
+     */
     private fun checkLocationPermission(): Boolean {
         if (ContextCompat.checkSelfPermission(this,
                 Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
@@ -97,6 +99,9 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    /**
+     * Get User Location
+     */
     private fun getLocation() {
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
         fusedLocationClient.lastLocation

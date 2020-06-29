@@ -6,48 +6,120 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:padding="8dp"
+    android:padding="2dp"
     android:gravity="center"
+    android:backgroundTint="@color/transparent"
     card_view:cardUseCompatPadding="true"
-    card_view:cardElevation="4dp"
+    card_view:cardElevation="2dp"
     card_view:cardCornerRadius="3dp"
+
     tools:context=".view.MainActivity">
     <LinearLayout
         android:orientation="vertical"
-        android:padding="6dp"
+        android:padding="3dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TextView
-            android:id="@+id/station_name"
-            style="@style/TextAppearance.AppCompat.Medium"
-            android:gravity="center_horizontal"
+        android:layout_height="match_parent">
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            tools:text="1 RIO SENA-RIO BALSAS">
-        </TextView>
-        <TextView
-            android:id="@+id/address_station"
-            tools:text="001 - Río Sena-Río Balsas"
-            android:gravity="center_horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-        </TextView>
-        <TextView
-               android:id="@+id/bikes_available"
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:gravity="center_horizontal"
-               tools:text="Bicicletas disponibles: 5">
-        </TextView>
-        <TextView
-                android:id="@+id/places_available"
-                android:gravity="center_horizontal"
+            android:layout_height="228dp"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:weightSum="4">
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                tools:text="Lugares disponibles: 20">
-        </TextView>
+                android:layout_height="10dp"
+                android:layout_gravity="center"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/station_name"
+                    style="@style/TextAppearance.AppCompat.Medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    tools:text="1 RIO SENA-RIO BALSAS">
+
+                </TextView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="3dp"
+                android:layout_weight="3"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:src="@drawable/ecobici_image">
+
+                    </ImageView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/address_station"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+
+                        android:gravity="center"
+
+                        tools:text="001 - Río Sena-Río Balsas"></TextView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/bikes_available"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+
+                        tools:text="Bicicletas: 5"></TextView>
+
+                    <TextView
+                        android:id="@+id/places_available"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+
+                        tools:text="Lugares: 20"></TextView>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
     </LinearLayout>
-
-
-
 </androidx.cardview.widget.CardView>
