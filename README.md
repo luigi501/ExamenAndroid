@@ -56,7 +56,7 @@ que se lee con el helper JsonReaderHelper y el método "getInfoBikes".
 
 ## Mostrar las estaciones en una lista donde venga:
 
-* La dirección de la estación
+* La dirección de la estación  
 * Los lugares de bicicletas que están disponibles
 * Las bicicletas que están o no disponibles
 * Quitar de la lista las estaciones sin bicicletas
